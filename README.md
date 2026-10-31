@@ -21,7 +21,7 @@ None uses `sorry`; `#print axioms` shows only Lean's standard axioms
 | [onnxruntime-subbyte-dequant](onnxruntime-subbyte-dequant) | ONNX Runtime | int4/int2 `DequantizeLinear` CPU loops | 4-24x | [microsoft/onnxruntime#33784](https://github.com/microsoft/onnxruntime/pull/33784) |
 | [wfdb-xqrs-backsearch](wfdb-xqrs-backsearch) | wfdb-python | XQRS backsearch quadratic rescan → skip checked peaks | 40-min gap 23s → 1.3s | [MIT-LCP/wfdb-python#596](https://github.com/MIT-LCP/wfdb-python/pull/596) (merged) |
 | [biopython-nexus-charbuffer](biopython-nexus-charbuffer) | Biopython | NEXUS `CharBuffer` list `pop(0)` → string + cursor | ~100x on long commands | [biopython/biopython#5397](https://github.com/biopython/biopython/pull/5397) |
-| [clickhouse-posix-class-scan](clickhouse-posix-class-scan) | ClickHouse | regexp analyzer `[:` lookup rescans pattern → find last `:]` once | 34 s → 0.0002 s analysis | PR_PLACEHOLDER |
+| [clickhouse-posix-class-scan](clickhouse-posix-class-scan) | ClickHouse | regexp analyzer `[:` lookup rescans pattern → find last `:]` once | 34 s → 0.0002 s analysis | [ClickHouse/ClickHouse#128394](https://github.com/ClickHouse/ClickHouse/pull/128394) |
 
 Each folder's README says what is proved and what is modelled by hand. The
 models are transcribed from the real code, so the tests in each PR are what tie
