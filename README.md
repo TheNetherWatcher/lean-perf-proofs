@@ -23,6 +23,7 @@ None uses `sorry`; `#print axioms` shows only Lean's standard axioms
 | [biopython-nexus-charbuffer](biopython-nexus-charbuffer) | Biopython | NEXUS `CharBuffer` list `pop(0)` → string + cursor | ~100x on long commands | [biopython/biopython#5397](https://github.com/biopython/biopython/pull/5397) |
 | [clickhouse-posix-class-scan](clickhouse-posix-class-scan) | ClickHouse | regexp analyzer `[:` lookup rescans pattern → find last `:]` once | 34 s → 0.0002 s analysis | [ClickHouse/ClickHouse#128394](https://github.com/ClickHouse/ClickHouse/pull/128394) |
 | [utf8h-ascii-fast-path](utf8h-ascii-fast-path) | utf8.h | ASCII fast paths in `utf8str`, `utf8casestr`, `utf8casecmp`, `utf8len`, `utf8valid`, `utf8lwr`/`utf8upr` | 3-23x on ASCII | [sheredom/utf8.h#151](https://github.com/sheredom/utf8.h/pull/151) |
+| [pyteomics-coverage-mask](pyteomics-coverage-mask) | pyteomics | `parser.coverage_mask`: lookahead regex per peptide → `str.find` + difference array | ~18x | [levitsky/pyteomics#229](https://github.com/levitsky/pyteomics/pull/229) |
 
 Each folder's README says what is proved and what is modelled by hand. The
 models are transcribed from the real code, so the tests in each PR are what tie
