@@ -26,6 +26,7 @@ None uses `sorry`; `#print axioms` shows only Lean's standard axioms
 | [pyteomics-coverage-mask](pyteomics-coverage-mask) | pyteomics | `parser.coverage_mask`: lookahead regex per peptide → `str.find` + difference array | ~18x | [levitsky/pyteomics#229](https://github.com/levitsky/pyteomics/pull/229) |
 | [pretty-midi-instrument](pretty-midi-instrument) | pretty-midi | `Instrument.remove_invalid_notes` repeated `list.remove` → one filter; `synthesize` bend scan per note → `bisect` | ~1900x / ~5x | [craffel/pretty-midi#269](https://github.com/craffel/pretty-midi/pull/269) |
 | [natural-levenshtein](natural-levenshtein) | natural | Plain Levenshtein full matrix → two rows; spellcheck Set dedupe and push edits | 6-30x distance, 2.4-4.9x spellcheck d2 | [NaturalNode/natural#798](https://github.com/NaturalNode/natural/pull/798) |
+| [nltk-edit-distance-bitparallel](nltk-edit-distance-bitparallel) | NLTK | `edit_distance` full DP table → Myers/Hyyrö bit-parallel | 7.6-263x | [nltk/nltk#4017](https://github.com/nltk/nltk/pull/4017) |
 
 Each folder's README says what is proved and what is modelled by hand. The
 models are transcribed from the real code, so the tests in each PR are what tie
