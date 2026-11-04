@@ -25,6 +25,7 @@ None uses `sorry`; `#print axioms` shows only Lean's standard axioms
 | [utf8h-ascii-fast-path](utf8h-ascii-fast-path) | utf8.h | ASCII fast paths in `utf8str`, `utf8casestr`, `utf8casecmp`, `utf8len`, `utf8valid`, `utf8lwr`/`utf8upr` | 3-23x on ASCII | [sheredom/utf8.h#151](https://github.com/sheredom/utf8.h/pull/151) |
 | [pyteomics-coverage-mask](pyteomics-coverage-mask) | pyteomics | `parser.coverage_mask`: lookahead regex per peptide → `str.find` + difference array | ~18x | [levitsky/pyteomics#229](https://github.com/levitsky/pyteomics/pull/229) |
 | [pretty-midi-instrument](pretty-midi-instrument) | pretty-midi | `Instrument.remove_invalid_notes` repeated `list.remove` → one filter; `synthesize` bend scan per note → `bisect` | ~1900x / ~5x | [craffel/pretty-midi#269](https://github.com/craffel/pretty-midi/pull/269) |
+| [natural-levenshtein](natural-levenshtein) | natural | Plain Levenshtein full matrix → two rows; spellcheck Set dedupe and push edits | 6-30x distance, 2.4-4.9x spellcheck d2 | [NaturalNode/natural#798](https://github.com/NaturalNode/natural/pull/798) |
 
 Each folder's README says what is proved and what is modelled by hand. The
 models are transcribed from the real code, so the tests in each PR are what tie
